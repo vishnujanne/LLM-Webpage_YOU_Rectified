@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Delivery Company</title>
+  <style>
+    /* CSS styles for the webpage */
+    body {
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-right: 10px;
+    }
+    
+    .accordion {
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 10px;
+    }
+    
+    .accordion h2 {
+      margin: 0;
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    .accordion .content {
+      display: none;
+      padding: 10px;
+    }
+    
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    /* Additional CSS for accessibility */
+    a {
+      color: #fff;
+    }
+    
+    input[type="text"] {
+      border: 1px solid #333;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Food Delivery Company</h1>
+      <ul>
+        <li><a href="#" aria-label="Home">Home</a></li>
+        <li><a href="#" aria-label="Account">Account</a></li>
+        <li><a href="#" aria-label="Delivery History">Delivery History</a></li>
+        <li><a href="#" aria-label="Login">Login</a></li>
+        <li><a href="#" aria-label="Signup">Signup</a></li>
+        <li><input type="text" placeholder="Search" aria-label="Search"></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="accordion">
+    <h2>New Items</h2>
+    <div class="content">
+      <!-- Add photos of new items here -->
+    </div>
+  </div>
+  
+  <div class="items">
+    <!-- Add items with "add to cart" option here -->
+  </div>
+  
+  <footer class="footer">
+    <!-- Add social media links here -->
+  </footer>
+  
+  <script>
+    // JavaScript code for the accordion functionality
+    const accordion = document.querySelector('.accordion');
+    const content = accordion.querySelector('.content');
+    
+    accordion.addEventListener('click', function() {
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
